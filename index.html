@@ -462,27 +462,32 @@
   </footer>
 
   <!-- ── N8N CHAT WIDGET ── -->
-  <div id="n8n-chat"></div>
-  <script type="module">
-    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-    createChat({
-      webhookUrl: 'https://alberto26.zeabur.app/webhook/a9c1f3af-5116-41d5-a74a-5b9422a44363/chat',
-      initialMessages: [
-        '¡Hola! 👋',
-        'Bienvenido a Comuneros. ¿En qué podemos ayudarte?'
-      ],
-      defaultLanguage: 'en',
-      i18n: {
-        en: {
-          title: 'Comuneros',
-          subtitle: 'Estamos aquí para ayudarte 😊',
-          footer: '',
-          getStarted: 'Nueva conversación',
-          inputPlaceholder: 'Escribe tu mensaje…',
-        },
+ <div id="n8n-chat"></div>
+<script type="module">
+  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+  createChat({
+    webhookUrl: 'https://alberto26.zeabur.app/webhook/a9c1f3af-5116-41d5-a74a-5b9422a44363/chat',
+    mode: 'window',
+    chatInputKey: 'chatInput',
+    chatSessionKey: 'sessionId',
+    metadata: {},
+    showWelcomeScreen: false,
+    initialMessages: [
+      '¡Hola! 👋',
+      'Bienvenido a Comuneros. ¿En qué podemos ayudarte?'
+    ],
+    defaultLanguage: 'en',
+    i18n: {
+      en: {
+        title: 'Comuneros',
+        subtitle: 'Estamos aquí para ayudarte 😊',
+        footer: '',
+        getStarted: 'Nueva conversación',
+        inputPlaceholder: 'Escribe tu mensaje…',
       },
-    });
-  </script>
+    },
+  });
+</script>
 
 </body>
 </html>
